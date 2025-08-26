@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Symbiotic Merge — @symbioticfi</title>
+  <meta name="description" content="A snappy 60‑second match-and-merge mini game for @symbioticfi." />
+  <link rel="icon" href="assets/icons/orb.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-anim"></div>
+
+  <div class="container">
+    <header class="topbar">
+      
+      <h1 class="title">Symbiotic <span>Merge</span></h1>
+      <div class="hud">
+        <div class="chip"><span>Score</span><strong id="score">0</strong></div>
+        <div class="chip"><span>Time</span><strong id="timer">60</strong></div>
+        <button id="startBtn" class="btn primary">Start</button>
+        <button id="hintBtn" class="btn">Hint</button>
+        <button id="muteBtn" class="btn">🔈</button>
+      </div>
+    </header>
+
+    <main>
+      <div id="grid" class="grid" aria-label="game board" role="grid"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="tag">@symbioticfi • built with ❤️</div>
+      <a href="https://x.com/symbioticfi" target="_blank" rel="noopener" class="link">Follow</a>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <h2>Time's up!</h2>
+      <p>Your score: <strong id="finalScore">0</strong></p>
+      <div class="share">
+        <button id="restartBtn" class="btn primary">Play again</button>
+    
+      </div>
+    </div>
+  </div>
+
+  <template id="tileTpl">
+    <button class="tile" role="gridcell" aria-label="tile">
+      <img alt="" />
+    </button>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
